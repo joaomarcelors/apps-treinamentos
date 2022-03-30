@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:treinamento1_app/utils/app_routes.dart';
 import 'package:treinamento1_app/views/auth_screen.dart';
+import 'package:treinamento1_app/views/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +18,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.blue[900],
       ),
-      home: AuthScreen(),
+      routes: {
+        AppRoutes.auth: (ctx) => AuthScreen(),
+        AppRoutes.home: (ctx) => HomeScreen(),
+      },
     );
   }
 }
