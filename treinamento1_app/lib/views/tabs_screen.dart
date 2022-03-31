@@ -21,7 +21,7 @@ class _TabsScreenState extends State<TabsScreen> {
     ];
   }
 
-  void _selectScreen(int index){
+  void _selectScreen(int index) {
     setState(() {
       _selectedScreenIndex = index;
     });
@@ -30,7 +30,35 @@ class _TabsScreenState extends State<TabsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      body: _screens[_selectedScreenIndex]['screen'] as Widget,
+      bottomNavigationBar: BottomNavigationBar(
+        elevation: 24,
+        type: BottomNavigationBarType.fixed,
+        landscapeLayout: BottomNavigationBarLandscapeLayout.centered,
+        onTap: _selectScreen,
+        selectedItemColor: Theme.of(context).primaryColor,
+        unselectedItemColor: Colors.grey,
+        unselectedLabelStyle: TextStyle(color: Colors.grey),
+        currentIndex: _selectedScreenIndex,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home'
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Informações'
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.list_alt_sharp),
+            label: 'Acessos'
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Perfil'
+          ),
+        ],
+      ),
     );
   }
 }
