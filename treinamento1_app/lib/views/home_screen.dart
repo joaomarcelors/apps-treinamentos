@@ -9,16 +9,22 @@ class HomeScreen extends StatelessWidget {
       children: [
         Container(
           alignment: Alignment.center,
-          height: 150,
+          height: 170,
           width: double.infinity,
           color: Theme.of(context).primaryColor,
           child: ListTile(
             leading: ClipRRect(
-              borderRadius: BorderRadius.all(Radius.circular(50)),
+              borderRadius: BorderRadius.all(Radius.circular(200)),
               child: Image.asset(
                 'assets/images/camera.jpg',
-                fit: BoxFit.fill,
+                fit: BoxFit.cover,
+                height: 50,
+                width: 50,
               ),
+            ),
+            title: Text(
+              'UserXXX',
+              style: TextStyle(fontSize: 22, color: Colors.white),
             ),
           ),
         ),
@@ -31,7 +37,7 @@ class HomeScreen extends StatelessWidget {
           ),
           subtitle: Text('Lista de Usuários'),
           trailing: TextButton(
-            onPressed: (){},
+            onPressed: () {},
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -48,7 +54,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
         ),
-        for(var user in DUMMY_USERS)
+        for (var user in DUMMY_USERS) 
           UserCard(user)
       ],
     );
