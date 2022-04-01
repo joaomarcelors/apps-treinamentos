@@ -37,7 +37,7 @@ class UserCard extends StatelessWidget {
                 ),
                 alignment: Alignment.topCenter,
                 child: Text(
-                  'User ${user.name}',
+                  'User${user.name}',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
               ),
