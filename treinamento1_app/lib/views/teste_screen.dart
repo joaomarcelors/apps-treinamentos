@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:treinamento1_app/models/user.dart';
 
-class UserCard extends StatelessWidget {
-  final User user;
-
-  const UserCard(this.user);
-
+class TesteScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        elevation: 1,
-        margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Teste'),
+      ),
+      body: Card(
+        elevation: 5,
+        margin: const EdgeInsets.all(10),
         child: Container(
           padding: const EdgeInsets.all(20),
           //height: 140,
@@ -20,9 +18,9 @@ class UserCard extends StatelessWidget {
             children: [
               Container(
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(10),
                   child: Image.asset(
-                    user.imagem,
+                    'assets/images/image2.jpg',
                     fit: BoxFit.cover, //aplia para caber top
                     height: 100,
                     width: 100,
@@ -37,7 +35,7 @@ class UserCard extends StatelessWidget {
                 ),
                 alignment: Alignment.topCenter,
                 child: Text(
-                  'User ${user.name}',
+                  'User x',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
               ),
@@ -53,7 +51,7 @@ class UserCard extends StatelessWidget {
                     //fixedSize: MaterialStateProperty.all(Size(100, 10)),
                     
                     padding: MaterialStateProperty.all(EdgeInsets.zero),
-                    minimumSize: MaterialStateProperty.all(Size(100, 35)),
+                    minimumSize: MaterialStateProperty.all(Size(100, 30)),
                     shape: MaterialStateProperty.all(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
@@ -68,6 +66,7 @@ class UserCard extends StatelessWidget {
             ],
           ),
         ),
-      );
+      ),
+    );
   }
 }

@@ -3,6 +3,7 @@ import 'package:treinamento1_app/utils/app_routes.dart';
 import 'package:treinamento1_app/views/auth_screen.dart';
 import 'package:treinamento1_app/views/home_screen.dart';
 import 'package:treinamento1_app/views/tabs_screen.dart';
+import 'package:treinamento1_app/views/teste_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.blue[900],
       ),
       routes: {
+        AppRoutes.teste: (ctx) => TesteScreen(),
         AppRoutes.auth: (ctx) => AuthScreen(),
         AppRoutes.home: (ctx) => TabsScreen(),
       },
