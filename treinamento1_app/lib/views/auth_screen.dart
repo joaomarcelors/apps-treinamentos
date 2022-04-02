@@ -21,49 +21,47 @@ class AuthScreen extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
+          Container(
+            alignment: Alignment.bottomCenter,
+            child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Container(
+                    padding: const EdgeInsets.all(8),
                     height: 320,
                     width: double.infinity,
                     child: AuthCard(),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      height: 300,
-                      width: double.infinity,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              'Recuperar Senha',
-                              style: TextStyle(fontSize: 18),
-                            ),
-                            style: ButtonStyle(
-                              foregroundColor:
-                                  MaterialStateProperty.all<Color>(Colors.white),
-                            ),
+                  Container(
+                    height: 300,
+                    width: double.infinity,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Recuperar Senha',
+                            style: TextStyle(fontSize: 18),
                           ),
-                          TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              'Criar Conta',
-                              style: TextStyle(fontSize: 18),
-                            ),
-                            style: ButtonStyle(
-                              foregroundColor:
-                                  MaterialStateProperty.all<Color>(Colors.white),
-                            ),
+                          style: ButtonStyle(
+                            foregroundColor:
+                                MaterialStateProperty.all<Color>(Colors.white),
                           ),
-                        ],
-                      ),
+                        ),
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'Criar Conta',
+                            style: TextStyle(fontSize: 18),
+                          ),
+                          style: ButtonStyle(
+                            foregroundColor:
+                                MaterialStateProperty.all<Color>(Colors.white),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],

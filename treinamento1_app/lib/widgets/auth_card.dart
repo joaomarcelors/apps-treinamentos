@@ -35,6 +35,7 @@ class AuthCard extends StatelessWidget {
           children: [
             _createFormField(
               child: TextFormField(
+                textInputAction: TextInputAction.next,
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.only(top: 14),
                   prefixIcon: Icon(
@@ -59,6 +60,7 @@ class AuthCard extends StatelessWidget {
             ),
             _createFormField(
               child: TextFormField(
+                textInputAction: TextInputAction.next,
                 controller: _passwordController,
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.only(top: 14),
